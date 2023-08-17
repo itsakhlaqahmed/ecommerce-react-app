@@ -1,3 +1,8 @@
+# React Ecommerce Web App
+## Fake product API
+    
+
+// To Dos
 signup gender dropdown
 <!-- adding login/signup functionality -->
 loading screen
