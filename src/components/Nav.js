@@ -3,11 +3,10 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import DropdownCategories from "./DropdownCategories";
-import {FaUserCircle,  FaCartPlus, FaBars, FaSignInAlt } from 'react-icons/fa';
-import { isAuth } from "./common/auth/helpers";
+import {FaUserCircle,  FaCartPlus, FaBars, FaSignOutAlt } from 'react-icons/fa';
+import { isAuth, signOut } from "./common/auth/helpers";
 
 const Nav = () => {
-
     return (
         <nav className="navbar">
             <Link to='/' className="nav-brand">X-Plore</Link>
@@ -38,7 +37,7 @@ const Nav = () => {
                     isAuth() 
                     ? 
                     <Fragment >
-                    <a href="#" className="account-icon nav-item"><FaUserCircle /></a>
+                    <a href="/" className="account-icon nav-item" onClick={() => signOut()}><FaSignOutAlt /></a>
                     <a href="#" className="cart-icon nav-item"><FaCartPlus /></a>
                     </Fragment> 
                     :

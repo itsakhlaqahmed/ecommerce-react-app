@@ -16,7 +16,7 @@ const ProductDetailsPage = () => {
     useEffect(() => {
         let product = products.filter((product) => product.id === parseInt(id))
         setProduct(product[0]);
-        console.log(product)
+        console.log('product', product)
 
     }, [id, products]);
 

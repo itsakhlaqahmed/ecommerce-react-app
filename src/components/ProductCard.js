@@ -11,7 +11,7 @@ const ProductCard = ({id, title, description, price, image}) => {
             <div className="product-img">
                 <img src={image || 'hattps://static-01.daraz.pk/p/39e7f90b0e8376b7e44637d6b3effe50.jpg'} alt={title} />
             </div>
-            <div className="product-body" id='dlt'>
+            <div className="product-body">
                 <Link to={`/products/product/${id}`} className="product-link" >
                     <div className="product-body-row1">
                         <h4 className="product-title">{(title || '').slice(0,32)+ '...' || 'Beats Solo3'}</h4>

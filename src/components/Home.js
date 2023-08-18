@@ -5,7 +5,8 @@ import Hero from "./Hero";
 import Categories from "./Categories";
 import ProductRow from "./ProductRow";
 import { ProductContext } from "./core/ProductContext";
-
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const Home = () => {
     const { products } = useContext(ProductContext);
@@ -15,9 +16,10 @@ const Home = () => {
     return (
         <Fragment>
             <Nav />
-            <Hero />
+            <Hero />    
             <Categories categories={'categories'} />
             <ProductRow heading={"Recommended Products"} data={products}/>
+
         </Fragment>
     )
 }

@@ -28,16 +28,23 @@ body {
 
 
 
+
+
+
+
 /* -------------- Navbar ------------------ */
 
 .navbar {
+    box-sizing: border-box;
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     /* justify-content: space-evenly; */
     align-items: center;
     padding: 0 24px;
     background-color: #fff;
     box-shadow: #b5b5b5 0 0 6px;
+    overflow: hidden;
+    width: 100%;
 }
 
 .navbar li {
@@ -46,6 +53,7 @@ body {
 
 
 .navbar-collapse {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -169,6 +177,57 @@ body {
     left: -48px; */
 }
 
+.dropdown-search-item-wrapper {
+    align-items: center;
+    box-sizing: border-box;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 4px 0;
+    padding: 8px 1.5rem;
+    text-decoration: none;
+    max-width: 450px;
+    z-index: 1;
+}
+
+
+.dropdown-search-item-wrapper:hover {
+    background-color: #ecececbb;
+}
+
+
+.title-img-wrapper {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    /* flex-grow: 0.1; */
+}
+
+.thumbnail {
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.title-img-wrapper h5 {
+    margin-left: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.item-price {
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
 
 .account-icon, .cart-icon {
     margin-left: 12px;
@@ -207,10 +266,6 @@ body {
     padding: 4px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-flow: column;
     background-color: #ffffff;
     border-radius: 4px;
     border: 1px solid #7f7f7fa1;
@@ -253,6 +308,7 @@ body {
 /* ------------------------ categories section ------------------------ */
 
 .categories-section {
+    box-sizing: border-box;
     display: flex;
     padding: 120px 70px;
     flex-direction: column;
@@ -323,6 +379,7 @@ body {
 /* -------------- Product Section -------------- */
 
 .product-section {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -331,6 +388,7 @@ body {
 }
 
 .product-row {
+    box-sizing: border-box;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);

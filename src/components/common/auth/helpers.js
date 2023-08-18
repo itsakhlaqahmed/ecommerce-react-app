@@ -4,7 +4,7 @@ import cookie from "js-cookie";
 // set in cookies
 
 export const setCookie = (key, value) => {
-    if(window){
+    if(window !== 'undefined'){
         cookie.set(key, value, {
             expires: 1
         })
@@ -14,16 +14,16 @@ export const setCookie = (key, value) => {
 // get from cookies
 
 export const getCookie = (key) => {
-    if(window){
-        cookie.get(key);
-    }
+    // if(window !== 'undefined'){
+        return cookie.get(key);
+    // }
 }
 
 
 // remove from cookies
 
 export const removeCookie = (key) => {
-    if(window){
+    if(window !== 'undefined'){
         cookie.remove(key);
     }
 }
@@ -31,7 +31,7 @@ export const removeCookie = (key) => {
 // set in local storage 
 
 export const setLocalStorage = (key, value) => {
-    if(window){
+    if(window !== 'undefined'){
         localStorage.setItem(key, JSON.stringify(value))
     }
 }
@@ -40,7 +40,7 @@ export const setLocalStorage = (key, value) => {
 // remove from local storage 
 
 export const removeLocalStorage = (key) => {
-    if(window){
+    if(window !== 'undefined'){
         localStorage.removeItemItem(key)
     }
 }
@@ -49,8 +49,9 @@ export const removeLocalStorage = (key) => {
 // save user info while signin in cookie and local storage
 
 export const authenicate = (response, next) => {
-    setCookie('token', (response.data.token))
-    setLocalStorage('user', response.data.token)
+    setCookie('token', (response.data.id))
+    setLocalStorage('user', response.data.id)
+    console.log("cookie created", response.data.id)
     next();
 }
 
@@ -68,10 +69,11 @@ export const signOut = next => {
 // access user info form localstorage
 
 export const isAuth = () => {
-    if(window){
+    if(window !== 'undefined'){
         const cookieChecked = getCookie('token');
         if(cookieChecked){
             let user = localStorage.getItem('user')
+            console.log(user)
             if(user){
                 return JSON.parse(user);
             }

@@ -4,6 +4,7 @@ import ProductsPage from "./Pages/ProductsPage";
 import ProductDetailsPage from "./Pages/ProductDetailsPage";
 import Login from "./components/common/auth/Login";
 import Signup from "./components/common/auth/Signup";
+import SearchPage from "./Pages/SearchPage";
 import './styles.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/categories/category" exact Component={''} />
       <Route path="/products/product/:id" exact Component={ProductDetailsPage} />
       <Route path="/category/:id" exact Component={ProductDetailsPage} />
+      <Route path="/search/:searchItem" exact Component={SearchPage} />
     </Routes>
   </BrowserRouter>
 

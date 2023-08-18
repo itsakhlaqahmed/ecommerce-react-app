@@ -35,7 +35,6 @@ const Login = () => {
             data: {email, password}
         }).then((res) => {
             
-            console.log(res, res.message)
             setValues({...values, buttonText: 'Login Successful'})
             authenicate(res, () => {
                 setValues({
