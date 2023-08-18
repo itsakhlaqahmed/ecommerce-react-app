@@ -59,7 +59,8 @@ const SearchBar = ({className}) => {
                             <a href={`/products/product/${item.id}`} key={item.id} className="dropdown-search-item-wrapper">
                                     <div className="title-img-wrapper">
                                         <div className="thumbnail"><img src={item.image} alt={item.title} /></div>
-                                        <h5>{item.title}</h5>
+                                        <div><h5>{item.title}</h5></div>
+                                        
                                     </div>
                                     <h5 className="item-price">Rs. {item.price}</h5>
                             </a>

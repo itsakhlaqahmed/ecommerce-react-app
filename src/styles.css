@@ -191,6 +191,10 @@ body {
     z-index: 1;
 }
 
+.scroll-y {
+    overflow-y: scroll;
+}
+
 
 .dropdown-search-item-wrapper:hover {
     background-color: #ecececbb;
@@ -201,10 +205,12 @@ body {
     align-items: center;
     display: flex;
     overflow: hidden;
+    /* flex-shrink: .2; */
     /* flex-grow: 0.1; */
 }
 
 .thumbnail {
+    width: min-content;
     box-sizing: border-box;
     width: 60px;
     height: 60px;
