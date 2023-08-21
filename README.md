@@ -7,7 +7,7 @@ signup gender dropdown
 <!-- adding login/signup functionality -->
 loading screen
 checkout page
-search functionality
+<!-- search functionality -->
 footer
 cart and my profile
 some popups
