@@ -8,7 +8,7 @@ signup gender dropdown
 loading screen
 checkout page
 <!-- search functionality -->
-footer
+<!-- footer -->
 cart and my profile
 some popups
 some animation

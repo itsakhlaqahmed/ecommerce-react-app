@@ -132,7 +132,7 @@ body {
     background-color: #8ab4f8;
     background-color: #001bea;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-left: 12px;
 }
 
@@ -697,7 +697,7 @@ body {
     height: 40px;
     background-color: transparent;
     border-style: none;
-    cursor: pointer;
+    cursor: pointer;    
     width: 1.5rem;
 }
 
@@ -757,4 +757,25 @@ body {
 .add-cart-btn:active {
     color: #fff;
     background-color: rgb(2, 76, 60 );
+}
+
+
+/* _________________________ Checkout Page ______________________ */
+
+.checkout-main {
+    width: 60%;
+}
+
+.client-info-form {
+    margin-top: 1rem;
+}
+
+.input-label {
+    font-size: .9rem;
+    font-weight: 600;
+
+}
+
+.mg-t-8 {
+    margin-top: .5rem;
 }

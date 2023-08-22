@@ -61,7 +61,7 @@ const Signup = () => {
                     </div>
                     <div className="form-container">
                         <form className="signup-form">
-                            <div className="form-row1">
+                            <div className="form-row">
                                 <div className="form-group">
                                     <input type="text" value={firstName} placeholder="Name" className="form-text-input" onChange={handleChange('firstName')}/>
                                 </div>

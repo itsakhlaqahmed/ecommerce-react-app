@@ -6,6 +6,7 @@ import Login from "./components/common/auth/Login";
 import Signup from "./components/common/auth/Signup";
 import SearchPage from "./Pages/SearchPage";
 import './styles.css'
+import Checkout from "./Pages/Checkout";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Route path="/products/product/:id" exact Component={ProductDetailsPage} />
       <Route path="/category/:id" exact Component={ProductDetailsPage} />
       <Route path="/search/:searchItem" exact Component={SearchPage} />
+      <Route path="/checkout" exact Component={Checkout} />
+      
     </Routes>
   </BrowserRouter>
 
