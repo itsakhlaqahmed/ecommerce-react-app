@@ -1,8 +1,9 @@
-import React, { Fragment, useContext, useEffect, useMemo, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../components/core/ProductContext";
 import Nav from "../components/Nav";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import Layout from "../components/common/auth/Layout";
 
 
 
@@ -91,10 +92,10 @@ const ProductDetailsPage = () => {
    
 
     return (
-        <Fragment>
-            <Nav />
+        <Layout>
             <Product />
-        </Fragment>
+        </Layout>
+        
     )
 }
 

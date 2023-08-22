@@ -7,6 +7,7 @@ import ProductRow from "./ProductRow";
 import { ProductContext } from "./core/ProductContext";
 import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
+import Footer from "./Footer";
 
 const Home = () => {
     const { products } = useContext(ProductContext);
@@ -19,6 +20,7 @@ const Home = () => {
             <Hero />    
             <Categories categories={'categories'} />
             <ProductRow heading={"Recommended Products"} data={products}/>
+            <Footer />
 
         </Fragment>
     )

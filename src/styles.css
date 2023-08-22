@@ -297,9 +297,37 @@ body {
 }
 
 
+/* _______________________ Footer _______________________ */
+
+.footer {
+    margin-top: 5rem;
+    display: flex;
+    padding: 70px;
+    justify-content: space-around;
+    background: azure;
+}
+
+.links-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+}
+
+.link-heading {
+    margin: 1rem 0;
+}
+
+.footer-link {
+    margin-top: .5rem;
+    text-decoration: none;
+    color: #000;
+    font-size: .8rem;
+
+}
 
 
-/* ------------------------ hero section ------------------------ */
+
+/* ______________________ hero section ______________________ */
 
 .hero-section {
     width: 100%;
@@ -314,7 +342,7 @@ body {
 }
 
 
-/* ------------------------ categories section ------------------------ */
+/* ______________________ categories section ______________________ */
 
 .categories-section {
     box-sizing: border-box;
