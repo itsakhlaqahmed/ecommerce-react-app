@@ -87,6 +87,19 @@
     padding: 0 4rem;
 }
 
+.form-heading {
+    vertical-align: middle;
+}
+
+.form-valid-icon {
+    color: green;
+    vertical-align: middle;
+}
+
+.form-error {
+    color: red;
+    font-size: .8rem;
+}
 
 .text-input-container {
     display: flex;
@@ -96,6 +109,7 @@
 }
 
 .form-group {
+    position: relative;
     box-sizing: border-box;
     width: 100%;
     margin-top: 1rem;
@@ -117,6 +131,7 @@
 .form-group.password-input-container {
     position: relative;
 }
+
 
 .show-password-icon {
     display: inline;
