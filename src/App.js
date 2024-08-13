@@ -1,31 +1,54 @@
+import React from "react";
+// import MainSlider from "./Components/Slider/MainSlider";
+// import Sliderfade from "./Components/Slider/Sliderfade";
+// import Staticslider from "./Components/Slider/Staticslider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import ProductsPage from "./Pages/ProductsPage";
-import ProductDetailsPage from "./Pages/ProductDetailsPage";
-import Login from "./components/common/auth/Login";
-import Signup from "./components/common/auth/Signup";
-import SearchPage from "./Pages/SearchPage";
-import './styles.css'
-import Checkout from "./Pages/Checkout";
+import Home from "../src/Pages/Home";
+import About from "../src/Pages/About";
+import Shop from "../src/Pages/Shop";
+import Contact from "../src/Pages/Contact";
+import Header from "../src/Components/Header/Navbar";
+import Footer from "../src/Components/Footer/Footer";
+// import Slider from "./Components/Slider/Slider";
 
-function App() {
+import "./App.css";
+import ProductDetails from "./Pages/ProductDetails";
+import NotFound from "./Pages/NotFound";
+import ScrollToTop from "./Components/ScrollButton/ScrollToTop";
+import Authentication from "./Pages/Authentication";
+import ResetPass from "./Components/Authentication/Reset/ResetPass";
+import BlogDetails from "./Components/Blog/BlogDetails/BlogDetails";
+import TermsConditions from "./Pages/TermsConditions";
+import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
+
+const App = () => {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/login" exact Component={Login}></Route>
-      <Route path="/signup" exact Component={Signup}></Route>
-      <Route path='/' exact Component={Home} />
-      <Route path='/products' exact Component={ProductsPage} />
-      <Route path="/categories/category" exact Component={''} />
-      <Route path="/products/product/:id" exact Component={ProductDetailsPage} />
-      <Route path="/category/:id" exact Component={ProductDetailsPage} />
-      <Route path="/search/:searchItem" exact Component={SearchPage} />
-      <Route path="/checkout" exact Component={Checkout} />
-      
-    </Routes>
-  </BrowserRouter>
+    <div>
+      <ScrollToTop />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/product" element={<ProductDetails />} />
+          <Route path="/loginSignUp" element={<Authentication />} />
+          <Route path="/resetPassword" element={<ResetPass />} />
+          <Route path="/BlogDetails" element={<BlogDetails />} />
+          <Route path="/terms" element={<TermsConditions />} />
+          <Route path="/cart" element={<ShoppingCart />} />
 
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+      {/* <Slider />
+      <Sliderfade />
+      <Staticslider />
+      <MainSlider /> */}
+    </div>
   );
-}
+};
 
 export default App;
